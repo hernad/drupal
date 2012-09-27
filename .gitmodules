@@ -1,0 +1,3 @@
+[submodule "sites/all/modules/ubercart"]
+	path = sites/all/modules/ubercart
+	url = git@github.com:hernad/ubercart.git
