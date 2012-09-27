@@ -1,0 +1,65 @@
+<?php
+
+/*
+function formexample_menu() {
+	$items['formexample'] = array (
+	  'title' => "View the sample form",
+			'page callback' => "drupal_get_form",
+			'page_arguments' => array('formexample_nameform'),
+			'access callback' => TRUE,
+			'type' => MENU_NORMAL_ITEM
+    );
+	
+	return $items;
+}
+*/
+
+function formexample_menu() {
+	$items['formexample'] = array(
+			'title' => 'Forma primjer',
+			'page callback' => 'drupal_get_form',
+			'page arguments' => array('formexample_form'),
+			'access callback' => TRUE,
+			'type' => MENU_NORMAL_ITEM
+	);
+	return $items;
+}
+
+
+function formexample_form($form, &$from_state) {
+	
+	$form['user_name'] = array(
+			'#title' => t('Vaše ime'),
+			'#type' => 'textfield',
+			'#description' => t('Molim unesite vaše ime.'),
+	);
+	
+	$form['submit'] = array(
+			'#type' => 'submit',
+			'#value' => t('Pošalji')
+	);
+	
+	return $form;
+
+}
+
+function formexample_form_validate($form, &$form_state) {
+	
+	if ($form_state['values']['user_name'] == 'Test') {
+		// informišemo form API that ovo polje nije prošlo validaciju
+
+		form_set_error('user_name', t('Test nije dozvoljen unos.'));
+	}
+}
+
+function formexample_form_submit($form, &$form_state) {
+	
+	// $form_state['values'] sadrži vrijednost polja koje smo unijeli
+	$name = $form_state['values']['user_name'];
+	
+	drupal_set_message(t('Hvala što ste popunili formu, %name',
+	array('%name' => $name)));
+}
+
+
+?>
