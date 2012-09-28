@@ -4,3 +4,6 @@
 [submodule "sites/all/modules/uc_pdf_invoice"]
 	path = sites/all/modules/uc_pdf_invoice
 	url = git@github.com:hernad/uc_pdf_invoice.git
+[submodule "sites/all/modules/easyrec_for_ubercart"]
+	path = sites/all/modules/easyrec_for_ubercart
+	url = git@github.com:hernad/easyrec_for_ubercart.git
