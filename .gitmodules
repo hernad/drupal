@@ -1,3 +1,6 @@
 [submodule "sites/all/modules/ubercart"]
 	path = sites/all/modules/ubercart
 	url = git@github.com:hernad/ubercart.git
+[submodule "sites/all/modules/uc_pdf_invoice"]
+	path = sites/all/modules/uc_pdf_invoice
+	url = git@github.com:hernad/uc_pdf_invoice.git
