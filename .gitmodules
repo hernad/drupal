@@ -7,3 +7,6 @@
 [submodule "sites/all/modules/easyrec_for_ubercart"]
 	path = sites/all/modules/easyrec_for_ubercart
 	url = git@github.com:hernad/easyrec_for_ubercart.git
+[submodule "sites/all/modules/jcarousel"]
+	path = sites/all/modules/jcarousel
+	url = git@github.com:hernad/jcarousel.git
